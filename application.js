@@ -12,15 +12,15 @@ var userChoices = ['rock', 'paper', 'scissors'];
 
 
 
-$('#button_rock').click(function(){
+$('#rock').click(function(){
   $("#result").text(playsGame("rock", randomChoice()));
 });
 
-$('#button_paper').click(function(){
+$('#paper').click(function(){
   $("#result").text(playsGame("paper", randomChoice()));
 });
 
-$('#button_scissors').click(function(){
+$('#scissors').click(function(){
   $("#result").text(playsGame("scissors", randomChoice()));
 });
 
@@ -51,6 +51,6 @@ function playsGame(userChoice, computerChoice){
 }
 
 function randomChoice(){
-  var index = Math.floor( Math.random() * choices.length )
-  return choices[index];
+  var index = Math.floor( Math.random() * userChoices.length )
+  return userChoices[index];
 }
